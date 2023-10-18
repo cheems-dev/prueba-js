@@ -1,15 +1,16 @@
 import React from 'react';
+import buttonStyle from "./IconTextButton.module.scss";
 
 interface IconTextButtonProps {
   imageSrc: string;
-  buttonText?: string;
+  buttonText: string;
 }
 
 const IconTextButton: React.FC<IconTextButtonProps> = ({ imageSrc, buttonText }) => {
   return (
-    <button className="custom-button">
-      <img src={imageSrc} alt="icon" className="button-icon" />
-      {buttonText && <span className="button-text">{buttonText}</span>}
+    <button className={buttonStyle.buttonContainer}>
+      <img src={imageSrc} alt="icon"/>
+      <span>{buttonText}</span>
     </button>
   );
 };

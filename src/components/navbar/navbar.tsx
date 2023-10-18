@@ -3,6 +3,7 @@ import IconTextButton from '../buttons/IconText/IconTextButton';
 
 import backIcon from '../../assets/images/icon_menu.png';
 import labIcon from '../../assets/images/icon_menu2.png';
+import IconButton from '../buttons/Icon/IconButton';
 
 const Navbar: React.FC = () => {
 
@@ -37,8 +38,8 @@ const Navbar: React.FC = () => {
       ))}    
       </div>
       <div className='action-buttons'>
-        <IconTextButton imageSrc = {backIcon}/>
-        <IconTextButton imageSrc = {labIcon}/>
+        <IconButton imageSrc = {backIcon}/>
+        <IconButton imageSrc = {labIcon}/>
       </div>
     </nav>
   );

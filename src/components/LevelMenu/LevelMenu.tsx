@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDataFilter } from '../../customHooks/filterData';
 import LevelCard from '../cards/LevelCard/LevelCard'
-import IconTextButton from '../buttons/IconText/IconTextButton';
 import BackIcon from '../../assets/images/back.png'
+import IconButton from '../buttons/Icon/IconButton';
+import TextButton from '../buttons/Text/TextButton';
 
 interface DataItem {
     name: string;
@@ -21,8 +22,8 @@ const LevelMenu: React.FC<LevelMenuProps> = ({ location, data }) => {
     return (
         <div>
             <div>
-                <IconTextButton imageSrc={BackIcon} />
-                <h2>{location}</h2>
+                <IconButton imageSrc={BackIcon} />
+                <TextButton buttonText={location}/>
 
                 <label htmlFor="colorFilter">Type</label>
                 <select
