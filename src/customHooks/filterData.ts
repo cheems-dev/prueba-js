@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 interface DataItem {
   name: string;
+  category: string;
   color: string;
 }
 
@@ -12,7 +13,7 @@ interface UseDataFilterProps {
 interface UseDataFilterResult {
   data: DataItem[];
   selectedFilter: string;
-  setFilterColor: (color: string) => void;
+  setFilterCategory: (category: string) => void;
 }
 
 export function useDataFilter({ initialData }: UseDataFilterProps): UseDataFilterResult {
@@ -23,12 +24,12 @@ export function useDataFilter({ initialData }: UseDataFilterProps): UseDataFilte
     if (!selectedFilter) {
       return data;
     }
-    return data.filter(item => item.color === selectedFilter);
+    return data.filter(item => item.category === selectedFilter);
   };
 
-  const setFilterColor = (color: string) => {
-    setselectedFilter(color);
+  const setFilterCategory = (category: string) => {
+    setselectedFilter(category);
   };
 
-  return { data: filterData(), selectedFilter, setFilterColor };
+  return { data: filterData(), selectedFilter, setFilterCategory };
 }

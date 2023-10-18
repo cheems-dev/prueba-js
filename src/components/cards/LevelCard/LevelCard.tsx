@@ -9,7 +9,7 @@ const LevelCard: React.FC<DataItem> = ({ name, color }) => {
     return (
         <div>
            <h3>{name}</h3>
-           <p>{color}</p>
+           <p style={{ color: color }}>{color}</p>
            <button>ENTER</button>
         </div>
   );
