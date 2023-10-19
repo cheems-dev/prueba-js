@@ -1,6 +1,6 @@
 import React from 'react';
 import IconTextButton from '../buttons/IconText/IconTextButton';
-
+import Styles from './Navbar.module.scss';
 import backIcon from '../../assets/images/icon_menu.png';
 import labIcon from '../../assets/images/icon_menu2.png';
 import IconButton from '../buttons/Icon/IconButton';
@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
   ]
 
   return (
-    <nav className="navbar">
-      <div className='action-buttons'>
+    <nav className={Styles.navbar}>
+      <div className={Styles.actionButtons}>
       {data.map((button, index) => (
         <IconTextButton
           key = {index}
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         />
       ))}    
       </div>
-      <div className='action-buttons'>
+      <div className={Styles.actionButtons}>
         <IconButton imageSrc = {backIcon}/>
         <IconButton imageSrc = {labIcon}/>
       </div>

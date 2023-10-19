@@ -1,0 +1,12 @@
+
+$LevelCardCircleSize: 14px;
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .actionButtons {
+        display: flex;
+    }
+}
