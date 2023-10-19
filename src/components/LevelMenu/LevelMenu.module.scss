@@ -1,0 +1,27 @@
+
+$LevelCardCircleSize: 14px;
+
+.levelContainer {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 16px;
+    margin: 16px;
+
+    border: 6px solid #e2b500;
+    border-radius: 10px;
+    background-color: rgb(204, 167, 104);
+
+    padding: 0;
+    margin: 0; 
+    list-style: none;
+}
+
+.menuActions {
+    display: flex;
+
+    .filtro {
+        margin-left: auto;
+    }
+
+}

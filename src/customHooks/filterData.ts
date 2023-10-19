@@ -4,6 +4,7 @@ interface DataItem {
   name: string;
   category: string;
   color: string;
+  backgroundSrc: string;
 }
 
 interface UseDataFilterProps {
